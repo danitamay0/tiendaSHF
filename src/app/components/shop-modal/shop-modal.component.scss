@@ -1,0 +1,44 @@
+
+.card{
+    display: flex;
+    flex-direction: row;
+}
+.card:hover{
+   
+    cursor: pointer;
+}
+.images{
+  
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-right: 20px;
+    img{
+        width: 100%;
+    }
+}
+
+
+.info{
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    mat-icon{
+        font-size: 20px;
+    }
+    .ub{
+        margin-right: 5px;
+    }
+   
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .location {
+        color:rgb(169, 186, 196);
+        display: flex;
+        
+    }
+ 
+}

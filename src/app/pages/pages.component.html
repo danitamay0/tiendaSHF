@@ -1,0 +1,15 @@
+<div>
+    <mat-toolbar color="white">
+        <img src="assets/logo.png" alt="">
+       
+        <span class="example-spacer"></span>
+      
+        <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon> Menu </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="cerrarSecion()">Cerrar Sesión</button>
+        
+        </mat-menu>
+        
+      </mat-toolbar>
+</div>
+<router-outlet></router-outlet>

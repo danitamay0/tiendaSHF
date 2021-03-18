@@ -1,0 +1,32 @@
+<section fxLayout="row"  fxLayoutAlign="center center" >
+  <div fxFlex="80" fxFlex.xs="100" fxFlex.ms="100"   fxLayout="column">
+
+    <div class="header" fxFlex="100" fxLayout="column" fxLayoutAlign="center center"  >
+      <h2>Hola {{_auth.getEmail()}} , ¿Qué te entregamos hoy?</h2>
+      <input  name="email" [(ngModel)]="filterShop" autocomplete="off" required placeholder="Busca las tiendas" type="text">
+
+    </div>
+    <div class="category" >
+      <h2>Categorías</h2>
+      <app-category></app-category>
+    </div>
+
+    <div class="shop" fxFlex="100" >
+      <div class="sectName">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">shopping_cart</mat-icon>
+        <h2>Tiendas</h2>
+      </div>
+      <app-shops [filterShop]="filterShop" ></app-shops>
+    </div>
+    <div class="shop" fxFlex="100" >
+      <div class="sectName">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">shopping_cart</mat-icon>
+        <h2>Promos</h2>
+      </div>
+      <app-promos></app-promos>
+    </div>
+  </div>
+
+
+
+</section>
