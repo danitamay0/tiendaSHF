@@ -1,0 +1,25 @@
+<div class="principal">
+    <div class="card" (click)="openDialog(store.id)" 
+     *ngFor="let store of stores" >
+        <div class="images"  >
+            <img [src]="store.picture" alt="">
+    
+        </div>
+        <div class="info" >
+            <h3>{{store.name}}</h3>
+            <div class="location">
+                <mat-icon>location_on</mat-icon> 
+                <h4 class="ub">{{store.location}}</h4>
+                <mat-icon>star_rate</mat-icon> 
+                <h4>{{store.rating}}</h4>
+               
+                
+            </div>
+            <div>
+
+                <span *ngFor="let lab of store.labels">{{lab}} </span>
+            </div>
+        </div>
+    </div>
+</div>
+

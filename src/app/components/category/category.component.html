@@ -1,0 +1,7 @@
+<section fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center center">
+    <div [ngClass]="{'selected': cat.selected}"  (click)="select(cat)" *ngFor="let cat of categories" fxLayout="column" style="padding:10px">
+        <img [src]="cat.picture" alt="">
+        <h3>{{cat.name}}</h3>
+        <mat-icon *ngIf="cat.selected" aria-hidden="false" aria-label="Example home icon">check</mat-icon>
+    </div>
+</section>

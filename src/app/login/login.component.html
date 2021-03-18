@@ -1,0 +1,53 @@
+<div>
+    <mat-toolbar color="white">
+        <img src="assets/logo.png" alt="">
+       
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon"   aria-label="Example icon-button with share icon">
+          <mat-icon>help</mat-icon>
+        </button>
+        
+      </mat-toolbar>
+</div>
+
+<div >
+    <form #loginForm="ngForm">
+    <div class="content" fxLayout="column" fxLayoutAlign="space-around center">
+        <div fxFlex="30" fxFlex.xs="55">
+                <div class="dot" >
+
+                    <img src="assets/logo-x.png" alt="">
+                </div>
+		</div>
+        <div fxFlex="30" fxFlex.xs="55">
+            <h2>Ingresa a tu tienda</h2>
+        </div>
+		<div fxFlex="30" fxFlex.xs="55">
+		
+            <input [(ngModel)]="credentials.email" name="email" autocomplete="off" required placeholder="correo electrónico" type="text">
+		</div>
+	
+		<div fxFlex="30" class="sec2">
+            <div class="input-icons"> 
+                <input  class="input-field" 
+                autocomplete="off"
+                type="password" 
+                placeholder="Contraseña"
+                required
+                name="password"
+                
+                [(ngModel)]="credentials.password"
+                > 
+            </div> 
+            
+		</div>
+		<div fxFlex="55" class="sec3" fxFlex.xs="15">
+		
+            <button  [disabled]="!loginForm.valid" (click)="login()" mat-flat-button color="primary">Ingresar</button>
+		</div>
+        
+	</div>
+</form>
+
+
+</div>

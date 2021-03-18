@@ -1,0 +1,34 @@
+.content{
+    background: aqua;
+}
+.header,.sectName{
+    margin: 20px 0;
+}
+.sectName{
+    display: flex;
+    align-items: center;
+    h2{
+        margin: 0;
+    }
+}
+input{
+    width: 50%;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid #39c;
+    outline: none;
+    background-color: #fff;
+    border: 0;
+    padding: 10px;
+
+    box-shadow: 1px 1px 15px #bebebe;
+   
+  }
+
+  @media screen and (max-width: 600px) {
+    input{
+       width: 80%;
+           color: white;
+     
+       }
+    }

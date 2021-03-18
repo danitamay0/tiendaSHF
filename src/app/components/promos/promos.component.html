@@ -1,0 +1,18 @@
+<section fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center center">
+    <div [ngClass]="{'selected': promo.selected}"   *ngFor="let promo of promos" fxLayout="column" style="padding:10px;text-align: left;">
+        <img [src]="promo.picture" alt="">
+        <h3>{{promo.name}}</h3>
+        <mat-icon *ngIf="promo.selected" aria-hidden="false" aria-label="Example home icon">check</mat-icon>
+        <div class="info" >
+                      <div class="location">
+                <mat-icon>location_on</mat-icon> 
+                <h4 class="ub">{{promo.store}}</h4>
+                <mat-icon>star_rate</mat-icon> 
+                <h4>{{promo.rating}}</h4>
+               
+            </div>
+           
+        </div>
+    </div>
+   
+</section>
